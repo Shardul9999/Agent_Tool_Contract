@@ -1,0 +1,13 @@
+2026-11-02 10:00:01 INFO [main] Server starting on port 8000
+2026-11-02 10:00:02 INFO [db] Database connection pool initialized (min=5, max=20)
+2026-11-02 10:00:05 INFO [auth] Loaded JWT signing keys from environment
+2026-11-02 10:01:15 INFO [http] GET /health 200 OK (latency=1.2ms)
+2026-11-02 10:02:30 WARN [cache] Redis cache miss on user:session:10442
+2026-11-02 10:02:31 INFO [db] User query returned record id=10442
+2026-11-02 10:03:10 ERROR [payment] Stripe webhook signature verification failed: invalid signature header
+2026-11-02 10:03:11 WARN [payment] Retrying webhook verification for event evt_998124
+2026-11-02 10:04:00 INFO [http] POST /api/v1/orders 201 Created (user_id=10442, order_id=ord_5521)
+2026-11-02 10:05:22 ERROR [worker] Background task failed: ConnectionResetError in email_notifier
+2026-11-02 10:05:23 WARN [worker] Re-queuing notification email for order ord_5521 (attempt 1/3)
+2026-11-02 10:06:00 INFO [http] GET /api/v1/orders/ord_5521 200 OK
+2026-11-02 10:07:45 INFO [metrics] CPU usage 14%, Memory usage 342MB / 1024MB
